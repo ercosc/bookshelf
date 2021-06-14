@@ -1,0 +1,27 @@
+.title {
+    text-align: center;
+}
+
+.form-book {
+    box-shadow: 0px 0px 5px gray;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.list-books {
+    box-shadow: 0px 0px 5px gray;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.book-detail {
+    box-shadow: 0px 0px 5px gray;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}

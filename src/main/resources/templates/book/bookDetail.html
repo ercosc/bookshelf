@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <link rel="stylesheet" href="style/style.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf</title>
+</head>
+
+<body>
+    <header>
+        <th:block th:include="navbar"></th:block>
+    </header>
+    <section>
+        <br>
+        <div class="container book-detail">
+
+            <div class="title">
+                <h2>Estante Virtual de Livros</h2>
+            </div>
+            <div class="row">
+                <div class="col s5 book-detail">
+                    <p>#<span th:text="${book.bookId}"></span></p>
+                    <p>Title: <span th:text="${book.bookTitle}"></span></p>
+                    <p>Title: <span th:text="${book.bookSubtitle}"></span></p>
+                    <p>Title: <span th:text="${book.author}"></span></p>
+                    <p>Title: <span th:text="${book.bookRating}"></span></p>
+                    <p>Title: <span th:text="${book.bookStatus}"></span></p>
+                </div>
+                <div class="col s5 push-s2" >
+                    <img th:alt="${book.bookTitle}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 book-detail">
+                    <p>Title: <span th:text="${book.bookSynopsis}"></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+
+</html>
