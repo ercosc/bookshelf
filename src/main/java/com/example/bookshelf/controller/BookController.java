@@ -17,7 +17,7 @@ public class BookController {
     private BookRepository br;
 
     
-    @RequestMapping("/")
+    @RequestMapping("/livros")
     public ModelAndView bookList() {
         ModelAndView mv = new ModelAndView("index");
         Iterable<Book> books = br.findAll();
@@ -34,7 +34,7 @@ public class BookController {
     @RequestMapping(value="/cadastrarLivro", method = RequestMethod.POST)
     public String saveBook(Book b) {
         br.save(b);
-        return "redirect:/";
+        return "redirect:/livros";
     }
 
     @RequestMapping(value="/{bookId}", method = RequestMethod.GET)
@@ -49,6 +49,6 @@ public class BookController {
     public String bookDelete(long bookId) {
         Book e = br.findBookByBookId(bookId);   
         br.delete(e);
-        return "redirect:/";
+        return "redirect:/livros";
     }
 }
